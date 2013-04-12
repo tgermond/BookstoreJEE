@@ -1,4 +1,4 @@
-bookstore
+Bookstore
 =========
 
 Written in Java
