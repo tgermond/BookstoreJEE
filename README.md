@@ -1,4 +1,4 @@
-Bookstore
+BookstoreJEE
 =========
 
 Written in Java
