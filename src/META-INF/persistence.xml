@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="JEE6" transaction-type="JTA">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jta-data-source>jdbc/Bookstore</jta-data-source>
+    <class>entities.Author</class>
+    <class>entities.Book</class>
+    <class>entities.Category</class>
+    <class>entities.Client</class>
+    <class>entities.Order</class>
+    <class>entities.OrderItem</class>
+    <class>entities.Persistent</class>
+  </persistence-unit>
+</persistence>

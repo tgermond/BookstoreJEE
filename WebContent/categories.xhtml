@@ -1,0 +1,11 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+   
+  <h:dataTable value ="#{categoryController.getCategories()}" var="category">
+  	<h:column>
+  		<h:link value="#{category.title}" outcome="category">
+  			<f:param name="selectedCategoryId" value="#{category.id}"/>
+  		</h:link>
+  	</h:column>
+  </h:dataTable>
+</ui:composition>

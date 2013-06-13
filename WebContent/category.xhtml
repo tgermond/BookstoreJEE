@@ -1,0 +1,57 @@
+ <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="template.xhtml">
+  	<ui:define name="top">
+    	<ui:include src="top.xhtml" />
+  	</ui:define>
+  	<ui:define name="left">
+    	<ui:include src="categories.xhtml" />
+  	</ui:define>
+	<ui:define name="content">
+	  	<f:metadata>
+	  		<f:viewParam name="selectedCategoryId" value="#{selectedCategoryId}"></f:viewParam>
+				<!-- <f:event type="preRenderView" listener="#{category.selectEntity}" /> -->
+				<!-- En JSF 2.2
+				<f:viewAction action="#{bookBean.selectEntity}" />
+				-->			
+			</f:metadata>
+		
+		<h:dataTable value="#{categoryController.getCategoryById(selectedCategoryId).books}" var="book"
+						styleClass="order-table"
+    					headerClass="order-table-header"
+    					rowClasses="order-table-odd-row,order-table-even-row"
+    					>
+    		<h:column>
+				<f:facet name="header">Photo</f:facet>
+				<!-- <h:outputText value="#{book.date}"/> -->
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Titre</f:facet>
+				<h:link value="#{book.title}" outcome="book">
+	  				<f:param name="selectedBookId" value="#{book.id}"/>
+	  			</h:link>
+			</h:column>			
+		</h:dataTable>
+	</ui:define>
+	
+</ui:composition>
+
+ <!-- 
+ title 
+   price = new BigDecimal(0);;
+   date = new Date();
+ List<Author> authors;
+ photo;
+ <h:column>
+				<f:facet name="header">Date</f:facet>
+				<h:outputText value="#{book.date}"/>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Auteurs</f:facet>
+				<h:outputText value="#{book.authors}"/>
+			</h:column>
+			
+  -->
+
+ 
