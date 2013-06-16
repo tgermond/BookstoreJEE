@@ -29,6 +29,6 @@
 	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/Bookstore Jee/TP_JEE/WebContent/WEB-INF/lib/quartz-2.1.7.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/Bookstore Jee/TP_JEE/WebContent/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/Bookstore Jee/TP_JEE/WebContent/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
-	<classpathentry kind="con" path="DERBY_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/mysql-connector-java-5.1.25/mysql-connector-java-5.1.25/mysql-connector-java-5.1.25-bin.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
