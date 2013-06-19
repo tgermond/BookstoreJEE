@@ -5,72 +5,22 @@
     	<ui:include src="top.xhtml" />
   	</ui:define>
   	<ui:define name="left">
-    	<ui:include src="categories.xhtml" />
+    	<ui:include src="left.xhtml" />
   	</ui:define>
 	<ui:define name="content">
-	  	<f:metadata>
-	  		<f:viewParam name="selectedBookId" value="#{selectedBookId}"></f:viewParam>	
-			</f:metadata>
-		
-		<h:dataTable value="#{bookController.getBookById(selectedBookId)}" var="book">
-    		<h:column>
-				<f:facet name="header">Photo</f:facet>
-				<!-- <h:outputText value="#{book.date}"/> -->
-				<!--<img src="#{bookController.getBookById(selectedBookId)}" width="300" height="240" alt="photo">-->
-			</h:column>
-			
-			<h:column>
-				<f:facet name="header">Titre</f:facet>
-				<h:outputText value="#{book.title}"/>		
-			</h:column>
-				
-			<h:column>
-				<f:facet name="header">Auteur(s)</f:facet>
-					
-					
-					<c:forEach items="#{book.authors}" var="auth">
-						<h:outputText value="#{auth.firstName} #{auth.lastName}"/>	
-					</c:forEach>	
-					
-			</h:column>
-
-			<h:column>
-				<f:facet name="header">Date</f:facet>
-				<h:outputText value="#{book.retourneElemDate(1)}/#{book.retourneElemDate(2)}/#{book.retourneElemDate(3)}"/>
-			</h:column>
-			<h:column>
-				<f:facet name="header">Prix</f:facet>
-				<h:outputText value="#{book.price}"/>
-			</h:column>
-			
-		</h:dataTable>
-	</ui:define>
 	
+
+		<h:form id="panier">
+			<h:panelGrid columns="2">  
+			     	<h:outputLabel value="Titre" />	   
+			     	<h:outputText value="#{currentBook.title}"/>
+			     	<h:outputLabel value="Prix" />	   
+			     	<h:outputText value="#{currentBook.price}"/>			     
+		   			<h:outputLabel value="Actions" />	   	
+			     	<h:commandLink action="#{panierController.addBook}" value="Ajouter au panier">
+						<f:param name="idAddBook" value="#{currentBook.id}" />
+					</h:commandLink>	     	
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
 </ui:composition>
- <!-- 
-<ul>
-		<c:forEach var="author" items="${book.authors}">
-			<li>${author.lastName} ${author.firstName}</li>
-					</c:forEach>
-</ul>
-
-
-
- title 
-   price = new BigDecimal(0);;
-   date = new Date();
- List<Author> authors;
- photo;
- <h:column>
-				<f:facet name="header">Date</f:facet>
-				<h:outputText value="#{book.date}"/>
-			</h:column>
-			
-			<h:column>
-				<f:facet name="header">Auteurs</f:facet>
-				<h:outputText value="#{book.authors}"/>
-			</h:column>
-			
-  -->
-
- 

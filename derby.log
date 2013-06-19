@@ -1,130 +1,39 @@
-Fri Jun 14 00:25:25 CEST 2013 : Apache Derby Serveur réseau - 10.9.1.1 - (1389855) démarré et prêt à accepter les connexions sur le port 1527
-Fri Jun 14 00:26:26 CEST 2013 Thread[DRDAConnThread_3,5,main] Cleanup action starting
-java.sql.SQLException: Database 'bookstore' not found.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:148)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:227)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3160)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:735)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:414)
-	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
-	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
-	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
-	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
-Caused by: java.sql.SQLException: Database 'bookstore' not found.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
-	... 18 more
-============= begin nested exception, level (1) ===========
-java.sql.SQLException: Database 'bookstore' not found.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:148)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:227)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3160)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:735)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:414)
-	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
-	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
-	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
-	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
-============= end nested exception, level (1) ===========
-Cleanup action completed
-Fri Jun 14 00:26:26 CEST 2013 Thread[DRDAConnThread_3,5,main] (DATABASE = bookstore), (DRDAID = {1}), Database 'bookstore' not found.
-Fri Jun 14 00:28:02 CEST 2013 Thread[DRDAConnThread_3,5,main] Cleanup action starting
-java.sql.SQLException: Database 'bookstore' not found.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:148)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:227)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3160)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:735)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:414)
-	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
-	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
-	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
-	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
-Caused by: java.sql.SQLException: Database 'bookstore' not found.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
-	... 18 more
-============= begin nested exception, level (1) ===========
-java.sql.SQLException: Database 'bookstore' not found.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:148)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:227)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3160)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:735)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:414)
-	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
-	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
-	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
-	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
-	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
-	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
-	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
-	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
-	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
-	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
-	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
-============= end nested exception, level (1) ===========
-Cleanup action completed
-Fri Jun 14 00:28:02 CEST 2013 Thread[DRDAConnThread_3,5,main] (DATABASE = bookstore), (DRDAID = {2}), Database 'bookstore' not found.
+Tue Jun 18 10:27:56 CEST 2013 : Apache Derby Serveur réseau - 10.9.1.1 - (1389855) démarré et prêt à accepter les connexions sur le port 1527
 ----------------------------------------------------------------
-Fri Jun 14 00:29:52 CEST 2013:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.1 - (1389855): instance a816c00e-013f-3fa4-b1c0-00000000002e 
-on database directory C:\Users\Yacin\Documents\Cours\Java\Bookstore\BookstoreJEE\sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@6d386751 
-Loaded from file:/C:/Users/Yacin/Documents/Cours/Java/Eclipse%20Juno/eclipse/plugins/org.apache.derby.core_10.9.1/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.7.0_10-b18
-user.dir=C:\Users\Yacin\Documents\Cours\Java\Bookstore\BookstoreJEE
-os.name=Windows 8
+Tue Jun 18 10:29:27 CEST 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.1 - (1389855): instance a816c00e-013f-5665-bf6a-00000000002e 
+on database directory C:\Users\Tom\git\BookstoreJEE\jee6  with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Loaded from file:/D:/Thomas/eclipse%20juno/plugins/org.apache.derby.core_10.9.1/derby.jar
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_29-b11
+user.dir=C:\Users\Tom\git\BookstoreJEE
+os.name=Windows 7
 os.arch=amd64
-os.version=6.2
+os.version=6.1
 derby.system.home=.
 Database Class Loader started - derby.database.classpath=''
-Fri Jun 14 00:31:47 CEST 2013 Thread[DRDAConnThread_11,5,main] Cleanup action starting
-java.sql.SQLException: Database 'bookstore' not found.
+----------------------------------------------------------------
+Tue Jun 18 10:29:30 CEST 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.1 - (1389855): instance 601a400f-013f-5665-bf6a-00000000002e 
+on database directory C:\Users\Tom\git\BookstoreJEE\sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Loaded from file:/D:/Thomas/eclipse%20juno/plugins/org.apache.derby.core_10.9.1/derby.jar
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_29-b11
+user.dir=C:\Users\Tom\git\BookstoreJEE
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=.
+----------------------------------------------------------------
+Tue Jun 18 10:29:30 CEST 2013:
+Shutting down instance 601a400f-013f-5665-bf6a-00000000002e on database directory C:\Users\Tom\git\BookstoreJEE\sun-appserv-samples with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Tue Jun 18 10:29:31 CEST 2013 Thread[DRDAConnThread_4,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:148)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:227)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3160)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:735)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:414)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Util.java:278)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2806)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
 	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
 	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
 	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
@@ -137,22 +46,53 @@ java.sql.SQLException: Database 'bookstore' not found.
 	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
 	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
 	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
-Caused by: java.sql.SQLException: Database 'bookstore' not found.
+Caused by: java.sql.SQLException: Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
-	... 18 more
+	... 16 more
+Caused by: java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	... 13 more
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
 ============= begin nested exception, level (1) ===========
-java.sql.SQLException: Database 'bookstore' not found.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:148)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:227)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3160)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:735)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:414)
+java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
 	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
 	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
 	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
@@ -165,18 +105,182 @@ java.sql.SQLException: Database 'bookstore' not found.
 	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
 	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
 	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	... 15 more
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
 ============= end nested exception, level (1) ===========
+============= begin nested exception, level (2) ===========
+java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= end nested exception, level (2) ===========
+============= begin nested exception, level (3) ===========
+ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+============= end nested exception, level (3) ===========
 Cleanup action completed
-Fri Jun 14 00:31:47 CEST 2013 Thread[DRDAConnThread_11,5,main] (DATABASE = bookstore), (DRDAID = {18}), Database 'bookstore' not found.
-Fri Jun 14 00:31:49 CEST 2013 Thread[DRDAConnThread_11,5,main] Cleanup action starting
-java.sql.SQLException: Database 'bookstore' not found.
+Tue Jun 18 10:29:31 CEST 2013 Thread[DRDAConnThread_4,5,main] (DATABASE = sun-appserv-samples), (DRDAID = {2}), Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+Tue Jun 18 10:29:31 CEST 2013 Thread[DRDAConnThread_4,5,main] (DATABASE = sun-appserv-samples), (DRDAID = {2}), The conglomerate (16) requested does not exist.
+Tue Jun 18 12:27:21 CEST 2013 Thread[DRDAConnThread_7,5,main] (XID = 3452), (SESSIONID = 173), (DATABASE = jee6), (DRDAID = ????????.??-795165437656823003{88}), Cleanup action starting
+Tue Jun 18 12:27:21 CEST 2013 Thread[DRDAConnThread_7,5,main] (XID = 3452), (SESSIONID = 173), (DATABASE = jee6), (DRDAID = ????????.??-795165437656823003{88}), Failed Statement is: INSERT INTO CLIENT (ADRESSE, CIVILITE, EMAIL, LOGIN, NOM, PASSWORD, PRENOM, VILLE, ZIPCODE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+ERROR 42X14: 'ADRESSE' is not a column in table or VTI 'JEE6.CLIENT'.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:295)
+	at org.apache.derby.impl.sql.compile.ResultColumn.bindResultColumnByName(ResultColumn.java:834)
+	at org.apache.derby.impl.sql.compile.ResultColumnList.bindResultColumnsByName(ResultColumnList.java:909)
+	at org.apache.derby.impl.sql.compile.InsertNode.bindStatement(InsertNode.java:299)
+	at org.apache.derby.impl.sql.GenericStatement.prepMinion(GenericStatement.java:400)
+	at org.apache.derby.impl.sql.GenericStatement.prepare(GenericStatement.java:99)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.prepareInternalStatement(GenericLanguageConnectionContext.java:1103)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement.<init>(EmbedPreparedStatement.java:134)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement20.<init>(EmbedPreparedStatement20.java:83)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement30.<init>(EmbedPreparedStatement30.java:63)
+	at org.apache.derby.impl.jdbc.EmbedPreparedStatement40.<init>(EmbedPreparedStatement40.java:40)
+	at org.apache.derby.jdbc.Driver40.newEmbedPreparedStatement(Driver40.java:107)
+	at org.apache.derby.impl.jdbc.EmbedConnection.prepareStatement(EmbedConnection.java:1685)
+	at org.apache.derby.impl.jdbc.EmbedConnection.prepareStatement(EmbedConnection.java:1566)
+	at org.apache.derby.impl.drda.DRDAStatement.prepare(DRDAStatement.java:681)
+	at org.apache.derby.impl.drda.DRDAStatement.explicitPrepare(DRDAStatement.java:642)
+	at org.apache.derby.impl.drda.DRDAConnThread.parsePRPSQLSTT(DRDAConnThread.java:3788)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:830)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Cleanup action completed
+----------------------------------------------------------------
+Tue Jun 18 12:31:52 CEST 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.1 - (1389855): instance 51aec24e-013f-5665-bf6a-00000000002e 
+on database directory C:\Users\Tom\git\BookstoreJEE\sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Loaded from file:/D:/Thomas/eclipse%20juno/plugins/org.apache.derby.core_10.9.1/derby.jar
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_29-b11
+user.dir=C:\Users\Tom\git\BookstoreJEE
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=.
+----------------------------------------------------------------
+Tue Jun 18 12:31:52 CEST 2013:
+Shutting down instance 51aec24e-013f-5665-bf6a-00000000002e on database directory C:\Users\Tom\git\BookstoreJEE\sun-appserv-samples with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Tue Jun 18 12:31:52 CEST 2013 Thread[DRDAConnThread_7,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
 	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:148)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:227)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3160)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:735)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:414)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Util.java:278)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2806)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
 	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
 	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
 	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
@@ -189,22 +293,53 @@ java.sql.SQLException: Database 'bookstore' not found.
 	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
 	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
 	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
-Caused by: java.sql.SQLException: Database 'bookstore' not found.
+Caused by: java.sql.SQLException: Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
 	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
-	... 18 more
+	... 16 more
+Caused by: java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	... 13 more
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
 ============= begin nested exception, level (1) ===========
-java.sql.SQLException: Database 'bookstore' not found.
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
-	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
-	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:148)
-	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:227)
-	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(EmbedConnection.java:3160)
-	at org.apache.derby.impl.jdbc.EmbedConnection.handleDBNotFound(EmbedConnection.java:735)
-	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:414)
+java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
 	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
 	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
 	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
@@ -217,12 +352,1034 @@ java.sql.SQLException: Database 'bookstore' not found.
 	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
 	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
 	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	... 15 more
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
 ============= end nested exception, level (1) ===========
+============= begin nested exception, level (2) ===========
+java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= end nested exception, level (2) ===========
+============= begin nested exception, level (3) ===========
+ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+============= end nested exception, level (3) ===========
 Cleanup action completed
-Fri Jun 14 00:31:49 CEST 2013 Thread[DRDAConnThread_11,5,main] (DATABASE = bookstore), (DRDAID = {19}), Database 'bookstore' not found.
+Tue Jun 18 12:31:52 CEST 2013 Thread[DRDAConnThread_7,5,main] (DATABASE = sun-appserv-samples), (DRDAID = {100}), Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+Tue Jun 18 12:31:52 CEST 2013 Thread[DRDAConnThread_7,5,main] (DATABASE = sun-appserv-samples), (DRDAID = {100}), The conglomerate (16) requested does not exist.
 ----------------------------------------------------------------
-Fri Jun 14 00:32:01 CEST 2013: Shutting down Derby engine
+Tue Jun 18 12:31:53 CEST 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.1 - (1389855): instance 0a42424f-013f-5665-bf6a-00000000002e 
+on database directory C:\Users\Tom\git\BookstoreJEE\sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Loaded from file:/D:/Thomas/eclipse%20juno/plugins/org.apache.derby.core_10.9.1/derby.jar
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_29-b11
+user.dir=C:\Users\Tom\git\BookstoreJEE
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=.
 ----------------------------------------------------------------
-Fri Jun 14 00:32:01 CEST 2013:
-Shutting down instance a816c00e-013f-3fa4-b1c0-00000000002e on database directory C:\Users\Yacin\Documents\Cours\Java\Bookstore\BookstoreJEE\sun-appserv-samples with class loader sun.misc.Launcher$AppClassLoader@6d386751 
+Tue Jun 18 12:31:53 CEST 2013:
+Shutting down instance 0a42424f-013f-5665-bf6a-00000000002e on database directory C:\Users\Tom\git\BookstoreJEE\sun-appserv-samples with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Tue Jun 18 12:31:53 CEST 2013 Thread[DRDAConnThread_8,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Util.java:278)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2806)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: java.sql.SQLException: Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	... 16 more
+Caused by: java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	... 13 more
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	... 15 more
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= end nested exception, level (1) ===========
+============= begin nested exception, level (2) ===========
+java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= end nested exception, level (2) ===========
+============= begin nested exception, level (3) ===========
+ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+============= end nested exception, level (3) ===========
+Cleanup action completed
+Tue Jun 18 12:31:53 CEST 2013 Thread[DRDAConnThread_8,5,main] (DATABASE = sun-appserv-samples), (DRDAID = {101}), Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+Tue Jun 18 12:31:53 CEST 2013 Thread[DRDAConnThread_8,5,main] (DATABASE = sun-appserv-samples), (DRDAID = {101}), The conglomerate (16) requested does not exist.
 ----------------------------------------------------------------
+Tue Jun 18 18:05:41 CEST 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.1 - (1389855): instance db818404-013f-5665-bf6a-00000000002e 
+on database directory C:\Users\Tom\git\BookstoreJEE\sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Loaded from file:/D:/Thomas/eclipse%20juno/plugins/org.apache.derby.core_10.9.1/derby.jar
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_29-b11
+user.dir=C:\Users\Tom\git\BookstoreJEE
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=.
+----------------------------------------------------------------
+Tue Jun 18 18:05:41 CEST 2013:
+Shutting down instance db818404-013f-5665-bf6a-00000000002e on database directory C:\Users\Tom\git\BookstoreJEE\sun-appserv-samples with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Tue Jun 18 18:05:41 CEST 2013 Thread[DRDAConnThread_9,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Util.java:278)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2806)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: java.sql.SQLException: Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	... 16 more
+Caused by: java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	... 13 more
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	... 15 more
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= end nested exception, level (1) ===========
+============= begin nested exception, level (2) ===========
+java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= end nested exception, level (2) ===========
+============= begin nested exception, level (3) ===========
+ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+============= end nested exception, level (3) ===========
+Cleanup action completed
+Tue Jun 18 18:05:41 CEST 2013 Thread[DRDAConnThread_9,5,main] (DATABASE = sun-appserv-samples), (DRDAID = {162}), Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+Tue Jun 18 18:05:41 CEST 2013 Thread[DRDAConnThread_9,5,main] (DATABASE = sun-appserv-samples), (DRDAID = {162}), The conglomerate (16) requested does not exist.
+----------------------------------------------------------------
+Tue Jun 18 18:05:41 CEST 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.1 - (1389855): instance 44828405-013f-5665-bf6a-00000000002e 
+on database directory C:\Users\Tom\git\BookstoreJEE\sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Loaded from file:/D:/Thomas/eclipse%20juno/plugins/org.apache.derby.core_10.9.1/derby.jar
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_29-b11
+user.dir=C:\Users\Tom\git\BookstoreJEE
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=.
+----------------------------------------------------------------
+Tue Jun 18 18:05:41 CEST 2013:
+Shutting down instance 44828405-013f-5665-bf6a-00000000002e on database directory C:\Users\Tom\git\BookstoreJEE\sun-appserv-samples with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Tue Jun 18 18:05:41 CEST 2013 Thread[DRDAConnThread_4,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Util.java:278)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2806)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: java.sql.SQLException: Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	... 16 more
+Caused by: java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	... 13 more
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	... 15 more
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= end nested exception, level (1) ===========
+============= begin nested exception, level (2) ===========
+java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= end nested exception, level (2) ===========
+============= begin nested exception, level (3) ===========
+ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+============= end nested exception, level (3) ===========
+Cleanup action completed
+Tue Jun 18 18:05:41 CEST 2013 Thread[DRDAConnThread_4,5,main] (DATABASE = sun-appserv-samples), (DRDAID = {163}), Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+Tue Jun 18 18:05:41 CEST 2013 Thread[DRDAConnThread_4,5,main] (DATABASE = sun-appserv-samples), (DRDAID = {163}), The conglomerate (16) requested does not exist.
+----------------------------------------------------------------
+Tue Jun 18 23:52:47 CEST 2013:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.1 - (1389855): instance ed83c406-013f-5665-bf6a-00000000002e 
+on database directory C:\Users\Tom\git\BookstoreJEE\sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Loaded from file:/D:/Thomas/eclipse%20juno/plugins/org.apache.derby.core_10.9.1/derby.jar
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_29-b11
+user.dir=C:\Users\Tom\git\BookstoreJEE
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=.
+----------------------------------------------------------------
+Tue Jun 18 23:52:47 CEST 2013:
+Shutting down instance ed83c406-013f-5665-bf6a-00000000002e on database directory C:\Users\Tom\git\BookstoreJEE\sun-appserv-samples with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Tue Jun 18 23:52:47 CEST 2013 Thread[DRDAConnThread_5,5,main] Cleanup action starting
+java.sql.SQLException: Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Util.java:142)
+	at org.apache.derby.impl.jdbc.Util.seeNextException(Util.java:278)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2806)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: java.sql.SQLException: Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	... 16 more
+Caused by: java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	... 13 more
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:98)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	... 15 more
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= end nested exception, level (1) ===========
+============= begin nested exception, level (2) ===========
+java.sql.SQLException: The conglomerate (16) requested does not exist.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(SQLExceptionFactory.java:42)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(SQLExceptionFactory40.java:122)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(SQLExceptionFactory40.java:71)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Util.java:256)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2800)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+Caused by: ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	... 13 more
+============= end nested exception, level (2) ===========
+============= begin nested exception, level (3) ===========
+ERROR XSAI2: The conglomerate (16) requested does not exist.
+	at org.apache.derby.iapi.error.StandardException.newException(StandardException.java:278)
+	at org.apache.derby.impl.store.access.heap.HeapConglomerateFactory.readConglomerate(HeapConglomerateFactory.java:254)
+	at org.apache.derby.impl.store.access.RAMAccessManager.conglomCacheFind(RAMAccessManager.java:482)
+	at org.apache.derby.impl.store.access.RAMTransaction.findExistingConglomerate(RAMTransaction.java:394)
+	at org.apache.derby.impl.store.access.RAMTransaction.openScan(RAMTransaction.java:1577)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.openScan(PropertyConglomerate.java:229)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.readDbProperties(PropertyConglomerate.java:712)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedDbProperties(PropertyConglomerate.java:745)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getCachedProperty(PropertyConglomerate.java:560)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.getProperty(PropertyConglomerate.java:628)
+	at org.apache.derby.impl.store.access.PC_XenaVersion.upgradeIfNeeded(PC_XenaVersion.java:60)
+	at org.apache.derby.impl.store.access.PropertyConglomerate.<init>(PropertyConglomerate.java:165)
+	at org.apache.derby.impl.store.access.RAMAccessManager.boot(RAMAccessManager.java:1150)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startModule(BaseMonitor.java:542)
+	at org.apache.derby.iapi.services.monitor.Monitor.bootServiceModule(Monitor.java:427)
+	at org.apache.derby.impl.db.BasicDatabase.bootStore(BasicDatabase.java:760)
+	at org.apache.derby.impl.db.BasicDatabase.boot(BasicDatabase.java:177)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.boot(BaseMonitor.java:1993)
+	at org.apache.derby.impl.services.monitor.TopService.bootModule(TopService.java:334)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.bootService(BaseMonitor.java:1827)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startProviderService(BaseMonitor.java:1693)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.findProviderAndStartService(BaseMonitor.java:1571)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.startPersistentService(BaseMonitor.java:990)
+	at org.apache.derby.iapi.services.monitor.Monitor.startPersistentService(Monitor.java:550)
+	at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(EmbedConnection.java:2767)
+	at org.apache.derby.impl.jdbc.EmbedConnection.<init>(EmbedConnection.java:383)
+	at org.apache.derby.impl.jdbc.EmbedConnection30.<init>(EmbedConnection30.java:73)
+	at org.apache.derby.impl.jdbc.EmbedConnection40.<init>(EmbedConnection40.java:53)
+	at org.apache.derby.jdbc.Driver40.getNewEmbedConnection(Driver40.java:70)
+	at org.apache.derby.jdbc.InternalDriver.connect(InternalDriver.java:255)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(EmbeddedDriver.java:126)
+	at org.apache.derby.impl.drda.Database.makeConnection(Database.java:257)
+	at org.apache.derby.impl.drda.DRDAConnThread.getConnFromDatabaseName(DRDAConnThread.java:1473)
+	at org.apache.derby.impl.drda.DRDAConnThread.verifyUserIdPassword(DRDAConnThread.java:1423)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseSECCHK(DRDAConnThread.java:3274)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseDRDAConnection(DRDAConnThread.java:1203)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(DRDAConnThread.java:1008)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(DRDAConnThread.java:295)
+============= end nested exception, level (3) ===========
+Cleanup action completed
+Tue Jun 18 23:52:47 CEST 2013 Thread[DRDAConnThread_5,5,main] (DATABASE = sun-appserv-samples), (DRDAID = {164}), Failed to start database 'sun-appserv-samples' with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4, see the next exception for details.
+Tue Jun 18 23:52:47 CEST 2013 Thread[DRDAConnThread_5,5,main] (DATABASE = sun-appserv-samples), (DRDAID = {164}), The conglomerate (16) requested does not exist.
+----------------------------------------------------------------
+Wed Jun 19 00:10:49 CEST 2013:
+Shutting down instance a816c00e-013f-5665-bf6a-00000000002e on database directory C:\Users\Tom\git\BookstoreJEE\jee6 with class loader sun.misc.Launcher$AppClassLoader@4aad3ba4 
+Wed Jun 19 00:10:49 CEST 2013 Thread[DRDAConnThread_6,5,main] (DATABASE = jee6), (DRDAID = {165}), Database 'jee6' shutdown.

@@ -4,16 +4,20 @@ import java.io.Serializable;
 import java.util.List;
 
 import javax.ejb.EJB;
-import javax.faces.bean.SessionScoped;
+import javax.enterprise.context.SessionScoped;
+import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import annotation.LoggedIn;
+
 
 import ejb.CategoryService;
 import entities.Category;
+import entities.Client;
 
 
 @Named
@@ -25,7 +29,14 @@ public class CategoryController implements Serializable {
 	@EJB
 	private CategoryService categoryService;
 	
-		
+	
+	private Category currentCat;
+	
+	@Produces @LoggedIn @Named  
+	public Category getCurrentCat() {
+		return currentCat;
+	}
+	
 	public List<Category> getList(){
 		return categoryService.findAll();
 	}
@@ -36,5 +47,10 @@ public class CategoryController implements Serializable {
 	
 	public Category getCategoryById(int id){
 		return categoryService.getCategoryById(id);
+	}
+	
+	public String displayCategory(Long id){
+		currentCat = categoryService.find(id);
+		return "category";
 	}
 }

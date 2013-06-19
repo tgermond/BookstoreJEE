@@ -1,5 +1,7 @@
 package ejb;
 
+
+import ejb.GenericCRUDService;
 import entities.Client;
 
 public interface ClientService extends GenericCRUDService<Client>{

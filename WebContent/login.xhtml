@@ -8,8 +8,11 @@
     <ui:include src="left.xhtml" />
   </ui:define>
   <ui:define name="content">
-    <h:form id="contentForm">
+   <ui:debug />
+    <h:form id="contentForm" rendered="#{clientController.loggedIn != true}">
+   
       <h:panelGrid columns="3">
+     
         <h:outputText value="#{strings['Client.login']}" />
         <h:inputText id="login" value="#{loginForm.login}" required="true" />
         <h:message for="login"></h:message>
@@ -17,8 +20,10 @@
         <h:inputSecret id="password" value="#{loginForm.password}" required="true" />
         <h:message for="password"></h:message>
       </h:panelGrid>
-      <h:commandButton action="#{clientController.doLogin}" value="#{strings['button.login']}"/>
-      <h:messages globalOnly="true"/>
+        
+      <h:commandButton action="#{clientController.doLogin}" value="Connexion" ajax="false"/>
+       <h:link value="Inscription" outcome="inscription" />
+       <h:messages globalOnly="true"/>
     </h:form>
   </ui:define>
 </ui:composition>

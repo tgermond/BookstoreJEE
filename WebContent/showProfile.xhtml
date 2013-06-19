@@ -1,0 +1,58 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html" template="template.xhtml">
+  
+  <ui:define name="top">
+    <ui:include src="top.xhtml" />
+  </ui:define>
+  <ui:define name="left">
+    <ui:include src="left.xhtml" />
+  </ui:define>
+  <ui:define name="content">
+  
+  <ui:debug />
+ 		<h:form id="profilForm" rendered="#{clientController.loggedIn}">  
+ 		<fieldset>
+            <legend>Vos informations</legend>
+ 				<h:panelGrid columns="3">  
+			     	<h:outputLabel for="login" value="Identifiant" />	   
+			     	<h:inputText id="login" value="#{currentClient.login}" required="true"/>
+			     	<h:message for="login"></h:message>
+		   		
+			   		<h:outputLabel for="password" value="Mot de passe" />
+			   		<h:inputSecret id="password" value="#{currentClient.password}" required="true"/>
+			     	<h:message for="password"></h:message>  
+			     	
+			     	<h:outputLabel for="nom" value="Nom" />	   
+			     	<h:inputText id="nom" value="#{currentClient.nom}" required="true"/>
+			     	<h:message for="nom"></h:message>
+			     	
+			     	<h:outputLabel for="prenom" value="Prenom" />	   
+			     	<h:inputText id="prenom" value="#{currentClient.prenom}" required="true"/>
+			     	<h:message for="prenom"></h:message>
+			     	
+			     	<h:outputLabel for="email" value="Email" />	   
+			     	<h:inputText id="email" value="#{currentClient.email}" required="true"/>
+			     	<h:message for="email"></h:message>
+			     	
+			     	<h:outputLabel for="adresse" value="Adresse" />	   
+			     	<h:inputText id="adresse" value="#{currentClient.adresse}" required="true"/>
+			     	<h:message for="adresse"></h:message>
+			     	
+			     	<h:outputLabel for="ville" value="Ville" />	   
+			     	<h:inputText id="ville" value="#{currentClient.ville}" required="true"/>
+			     	<h:message for="ville"></h:message>
+			     	
+			     	<h:outputLabel for="zipcode" value="Code postal" />	   
+			     	<h:inputText id="zipcode" value="#{currentClient.zipcode}" required="true"/>
+			     	<h:message for="zipcode"></h:message>
+			     	
+			     		
+	   		</h:panelGrid>
+	   		<h:commandButton action="#{clientController.updateProfile}" value="Enregistrer les modifications"/>
+      	<h:messages globalOnly="true"/>	
+	   	</fieldset>
+		</h:form>
+   </ui:define>
+</ui:composition>
+
+      

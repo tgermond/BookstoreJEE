@@ -4,6 +4,7 @@ import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.persistence.NoResultException;
 
+import ejb.GenericCRUDServiceEJB;
 import entities.Client;
 @Stateless
 @Local(ClientService.class)
@@ -35,4 +36,5 @@ public class ClientServiceEJB extends GenericCRUDServiceEJB<Client> implements C
 	    }
 	    return client;
   }
+  
 }

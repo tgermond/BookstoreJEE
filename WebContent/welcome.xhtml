@@ -4,12 +4,10 @@
     <ui:include src="top.xhtml" />
   </ui:define>
   <ui:define name="left">
-    <ui:include src="categories.xhtml" />
+    <ui:include src="left.xhtml" />
   </ui:define>
   <ui:define name="content">
-  	<h:outputText value="#{strings['Client.login']}"></h:outputText>
-    <h:form id="contentForm">
-      <h:commandButton action="#{clientController.doLogout}" value="#{strings['button.logout']}"/>
-    </h:form>
+  
+  	<h:outputText value="Bonjour #{currentClient.prenom}"></h:outputText>
   </ui:define>
 </ui:composition>

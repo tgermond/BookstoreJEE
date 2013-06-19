@@ -1,12 +1,12 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
   xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
   
+<h:form>
 <h:dataTable value ="#{categoryController.getList()}" var="category">
   	<h:column>
-  		<h:link value="category.title" outcome="category">
-  			<f:param name="selectedEntityId" value="#{category.id}"/>
-  		</h:link>
+  		<h:commandLink action="#{categoryController.displayCategory(category.id)}" value="#{category.title}"></h:commandLink>
   	</h:column>
   </h:dataTable>
-  
+</h:form>  
+  	
 </ui:composition>

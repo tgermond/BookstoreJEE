@@ -20,13 +20,12 @@ public class LoginForm {
 	public void setLogin(String login) {
 		this.login = login;
 	}
-
+	
+	@NotNull
+	@Length(min = 3, max = 25)
 	public String getPassword() {
 		return password;
 	}
-
-	@NotNull
-	@Length(min = 3, max = 25)
 	public void setPassword(String password) {
 		this.password = password;
 	}
