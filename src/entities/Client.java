@@ -25,6 +25,14 @@ import javax.persistence.OneToMany;
 public class Client extends Persistent {
   private String login;
   private String password;
+  private String civilite;
+  private String nom;
+  private String prenom;
+
+  private String email;
+  private String adresse;
+  private String ville;
+  private int zipcode;
   private List<Order> commandes = new ArrayList<Order>();
   
   public boolean equals(Object other){
@@ -32,11 +40,11 @@ public class Client extends Persistent {
         return getLogin().equals(((Client)other).getLogin());
     return false;
   }
+  
   public int hashCode(){
     return getLogin().hashCode();
   }
 
-  
   @Column(nullable = false, unique=true)
   public String getLogin() {
     return login;
@@ -58,5 +66,60 @@ public class Client extends Persistent {
   public void setCommandes(List<Order> commandes) {
     this.commandes = commandes;
   }
-
+  public void setCivilite(String civ) {
+	  this.civilite = civ;
+  } 
+  public void setNom(String nom) {
+	this.nom = nom;
+	} 
+	
+  public void setPrenom(String prenom) {
+	this.prenom = prenom;
+	}
+  
+  public void setEmail(String email) {
+	this.email = email;
+	}
+	
+  public void setAdresse(String adresse) {
+	this.adresse = adresse;
+	}  
+	
+  public void setVille(String ville) {
+	this.ville = ville;
+  }  
+	
+  public void setZipcode(int zipcode) {
+		this.zipcode = zipcode;
+  }
+  
+  @Column
+  public String getNom() {
+	return this.nom;
+  }  
+  @Column
+  public String getCivilite() {
+	return this.civilite;
+  }
+  @Column
+  public String getPrenom() {
+	return this.prenom;
+  }
+  
+  @Column 
+  public String getEmail() {
+	return this.email;
+  }	
+  @Column
+  public String getAdresse() {
+	return this.adresse;
+  }
+  @Column
+  public String getVille() {
+	return this.ville;
+  }
+  @Column
+  public int getZipcode() {
+	return this.zipcode;
+  }  
 }

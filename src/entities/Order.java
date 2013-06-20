@@ -12,6 +12,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -26,6 +27,7 @@ import javax.persistence.Transient;
 @Entity
 @Table(name = "Orders")
 public class Order extends Persistent {
+
 	private Client client;
 	private List<OrderItem> items = new ArrayList<OrderItem>();
 	private BigDecimal total;
@@ -79,7 +81,7 @@ public class Order extends Persistent {
 		}
 	}
 
-	private void addItem(OrderItem item) {
+	public void addItem(OrderItem item) {
 		items.add(item);
 		item.setOrder(this);
 	}
@@ -89,7 +91,7 @@ public class Order extends Persistent {
 		for (Iterator<OrderItem> it = items.iterator(); it.hasNext()
 				&& found == null;) {
 			OrderItem item = it.next();
-			if (book.equals(item.getBook())) {
+			if (book.getId().equals(item.getBook().getId())){
 				found = item;
 			}
 		}
@@ -97,10 +99,13 @@ public class Order extends Persistent {
 	}
 
 	public void addOne(Book book) {
+		System.out.println("PANIER ADD ONE");
 		OrderItem found = find(book);
 		if (found == null) {
+			 System.out.println("addItem "+book.getTitle());
 			addItem(new OrderItem(book, 1));
 		} else {
+			System.out.println("addOne ");
 			found.addOne();
 		}
 		computeTotal();
@@ -113,6 +118,35 @@ public class Order extends Persistent {
 			if (found.getQuantity() == 0)
 				items.remove(found);
 		}
+		 System.out.println("remove one");
 		computeTotal();
 	}
+	
+	 public void remove (Book book)
+	 {
+		 OrderItem found = find(book);
+	     if (found != null) {
+	    	 items.remove(found);
+	     }
+	     computeTotal();
+	 }
+	 
+	 public void removeWithoutTotal (Book book)
+	 {
+		 OrderItem found = find(book);
+	     if (found != null) {
+	    	 items.remove(found);
+	     }
+	 }
+	 
+	 public void removeAll() {
+		Object[] itemsArray = this.items.toArray();
+		Book book = null;
+		for(int i = 0; i < itemsArray.length; i++) {
+			book = ((OrderItem) itemsArray[i]).getBook();
+			this.removeWithoutTotal(book);
+		}
+	 }
+	
+	
 }
