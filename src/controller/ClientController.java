@@ -3,12 +3,10 @@ package controller;
 import java.io.Serializable;
 
 import javax.ejb.EJB;
+import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Produces;
-import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-
-import jpautil.JpaFilter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,11 +14,13 @@ import org.slf4j.LoggerFactory;
 import ejb.ClientService;
 import entities.Client;
 
+@SuppressWarnings("serial")
 @Named
 @SessionScoped
 public class ClientController implements Serializable {
 
 	private static Logger log = LoggerFactory.getLogger(ClientController.class);
+	
 	@EJB
 	private ClientService clientService;
 	
