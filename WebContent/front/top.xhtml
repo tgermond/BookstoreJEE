@@ -1,6 +1,6 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
   xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
-  <h:graphicImage value="resources/images/logo.png"/>
+  <h:graphicImage value="../resources/images/logo.png"/>
 
 	
 	<h:form rendered="#{clientController.loggedIn == false}">
@@ -10,7 +10,8 @@
 	<h:panelGroup columns="3" rendered="#{clientController.loggedIn}">  
 	  	<h:form id="Menu">
 	  	<h:panelGrid columns="3">   
-	  		<h:commandLink action="#{clientController.goToMyProfile}" value="Mon compte" />	 	
+	  		<h:commandLink action="#{clientController.goToMyProfile}" value="Mon compte" />	 
+	  		<h:commandLink action="#{clientController.seeMyOrders}" value="Mes commandes" />	 	
 	      	<h:commandLink action="#{clientController.doLogout}" value="#{strings['button.logout']}"/>
 	     </h:panelGrid>
 	    </h:form>

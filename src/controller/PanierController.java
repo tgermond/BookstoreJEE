@@ -1,6 +1,7 @@
 package controller;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.Map;
 
 import javax.ejb.EJB;
@@ -14,6 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import ejb.BookService;
+import ejb.OrderService;
 import entities.Client;
 import entities.Order;
 import entities.Book;
@@ -26,6 +28,9 @@ public class PanierController implements Serializable {
 	
 	@EJB
 	private BookService bookService;
+	
+	@EJB
+	private OrderService orderService;
 	
 	private  transient @Inject Order currentOrder;
 	
@@ -74,5 +79,17 @@ public class PanierController implements Serializable {
 	
 	public String goToPanier(){
 		return "panier";
+	}
+	
+	public String recap(){
+		return "recapitulatif";
+	}
+	
+	public String validate(Client client){
+		currentOrder.setClient(client);
+		currentOrder.setDate(new Date());
+		orderService.create(currentOrder);
+		currentOrder.removeAll();
+		return "welcome";
 	}
 }

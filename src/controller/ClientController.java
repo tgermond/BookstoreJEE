@@ -89,4 +89,8 @@ public class ClientController implements Serializable {
 	public String goToLogin(){
 		return "login";
 	}
+	
+	public String seeMyOrders(){
+		return "mesCommandes";
+	}
 }

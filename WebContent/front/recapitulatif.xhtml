@@ -15,7 +15,7 @@
 					<f:facet name="header">Titre</f:facet>
 					<h:outputText value="#{item.book.title}"/>		
 				</h:column>
-					
+				
 				<h:column>
 					<f:facet name="header">Date</f:facet>
 					<h:outputText value="#{item.book.date}" >
@@ -30,19 +30,14 @@
 					<f:facet name="header">Quantite</f:facet>
 					<h:outputText value="#{item.quantity}"/>
 				</h:column>
-				<h:column>
-					<f:facet name="header">Actions</f:facet>
-					<h:commandLink action="#{panierController.addOne(currentBook.id)}" value="Ajouter" />	
-					
-					<h:commandLink action="#{panierController.removeOne(currentBook.id)}" value="Supprimer" />	
-				</h:column>		  
+  
           </h:dataTable>
    			<h:panelGrid columns="2">  
 			     	<h:outputLabel value="Total" />	   
-			     	<h:outputText value="#{panierController.getTotal()}"/>	
-			     	<h:commandLink action="#{panierController.deleteAll()}" value="Vider le panier">
-					</h:commandLink>	     	
+			     	<h:outputText value="#{panierController.getTotal()}"/>		     	
 			</h:panelGrid>
+			
+			<h:commandLink action="#{panierController.validate(currentClient)}" value="Valider" />	 
 		</h:form>
 
 	</ui:define>
