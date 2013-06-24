@@ -4,10 +4,6 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry exported="true" kind="con" path="DERBY_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/Thomas/MIAGE/M2/Java JEE/log4j-1.2.16.jar"/>
-	<classpathentry kind="lib" path="D:/Thomas/MIAGE/M2/Java JEE/quartz-2.1.7.jar"/>
-	<classpathentry kind="lib" path="D:/Thomas/MIAGE/M2/Java JEE/slf4j-api-1.6.1.jar"/>
-	<classpathentry kind="lib" path="D:/Thomas/MIAGE/M2/Java JEE/slf4j-log4j12-1.6.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/primefaces-3.5/primefaces-3.5.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/primefaces-3.5/flick-1.0.10.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JSF 2.1 (Mojarra 2.1.6-FCS)">
@@ -32,5 +28,9 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/Bookstore Jee/TP_JEE/WebContent/WEB-INF/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/Bookstore Jee/TP_JEE/WebContent/WEB-INF/lib/quartz-2.1.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/Bookstore Jee/TP_JEE/WebContent/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/Bookstore Jee/TP_JEE/WebContent/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
