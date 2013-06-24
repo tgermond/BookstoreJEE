@@ -1,5 +1,4 @@
 package controller;
-
 import java.io.Serializable;
 
 import javax.ejb.EJB;
