@@ -29,6 +29,8 @@ public class PanierController implements Serializable {
 	@EJB
 	private BookService bookService;
 	
+
+	
 	@EJB
 	private OrderService orderService;
 	
@@ -86,10 +88,15 @@ public class PanierController implements Serializable {
 	}
 	
 	public String validate(Client client){
-		currentOrder.setClient(client);
-		currentOrder.setDate(new Date());
-		orderService.create(currentOrder);
-		currentOrder.removeAll();
-		return "welcome";
+		if(client == null){
+			return "login";
+		}
+		else{
+			currentOrder.setClient(client);
+			currentOrder.setDate(new Date());
+			orderService.create(currentOrder);
+			currentOrder.removeAll();
+			return "welcome";
+		}
 	}
 }

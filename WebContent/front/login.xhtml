@@ -1,5 +1,5 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
-  xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="template.xhtml">
+  xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html" template="template.xhtml">
   
   <ui:define name="top">
     <ui:include src="top.xhtml" />
@@ -14,16 +14,16 @@
       <h:panelGrid columns="3">
      
         <h:outputText value="#{strings['Client.login']}" />
-        <h:inputText id="login" value="#{loginForm.login}" required="true" />
-        <h:message for="login"></h:message>
+        <p:inputText id="login"  value="#{loginForm.login}" required="true" />
+          <p:message id="msgLogin" for="login" display="text"/>
         <h:outputText value="#{strings['Client.password']}" />
-        <h:inputSecret id="password" value="#{loginForm.password}" required="true" />
-        <h:message for="password"></h:message>
+        <p:password id="password" value="#{loginForm.password}" required="true" />
+        <p:message id="msgPasswd" for="password" display="text"/>
       </h:panelGrid>
         
       <h:commandButton action="#{clientController.doLogin}" value="Connexion" ajax="false"/>
        <h:link value="Inscription" outcome="inscription" />
-       <h:messages globalOnly="true"/>
+       <!-- <p:messages id="messages" showDetail="true" autoUpdate="true"/> -->
     </h:form>
   </ui:define>
 </ui:composition>

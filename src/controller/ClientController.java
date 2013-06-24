@@ -33,6 +33,9 @@ public class ClientController implements Serializable {
 	@Inject
 	private RegisterForm registerForm;
 	
+	@Inject
+	private MessageBean messageBean;
+	
 	private Client currentClient;
 	
 	@Produces @LoggedIn @Named  
@@ -43,6 +46,7 @@ public class ClientController implements Serializable {
 	public String doLogin() {
 		currentClient = clientService.login(loginForm.getLogin(), loginForm.getPassword());
 		if(currentClient == null){
+			messageBean.addMessage("clientNotFound");
 			return null;
 		}	
 		return "welcome";
