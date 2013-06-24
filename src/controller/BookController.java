@@ -28,11 +28,6 @@ public class BookController implements Serializable {
 	
 	private Book currentBook;
 	
-	@Produces @LoggedIn @Named  
-	public Book getCurrentBook() {
-		return currentBook;
-	}
-	
 	public Book getBookById(int id){
 		return bookService.getBookById(id);
 	}

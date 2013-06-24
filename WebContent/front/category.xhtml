@@ -1,54 +1,64 @@
- <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
-  xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="template.xhtml">
-  	<ui:define name="top">
-    	<ui:include src="top.xhtml" />
-  	</ui:define>
-  	<ui:define name="left">
-    	<ui:include src="left.xhtml" />
-  	</ui:define>
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" template="template.xhtml">
+
+	<ui:define name="top">
+		<ui:include src="top.xhtml" />
+	</ui:define>
+	<ui:define name="left">
+		<ui:include src="left.xhtml" />
+	</ui:define>
 	<ui:define name="content">
-	  	<!--<f:metadata>
-	  		<f:viewParam name="selectedCategoryId" value="#{selectedCategoryId}"></f:viewParam>-->
-				<!-- <f:event type="preRenderView" listener="#{category.selectEntity}" /> -->
-				<!-- En JSF 2.2
-				<f:viewAction action="#{bookBean.selectEntity}" />
-				-->			
-			<!--</f:metadata>-->
+		<!--<h:form>
+			<h:dataTable value="#{currentCat.books}" var="book">
+				<h:column>
+					<f:facet name="header">Photo</f:facet>
+					<h:outputText value="#{book.date}" />
+				</h:column>
+
+				<h:column>
+					<f:facet name="header">Titre</f:facet>
+					<h:commandLink action="#{bookController.displayBook(book.id)}"
+						value="#{book.title}"></h:commandLink>
+					<h:link value="#{book.title}" outcome="book">
+						<f:param name="selectedBookId" value="#{book.id}" />
+					</h:link>
+				</h:column>
+			</h:dataTable>
+		</h:form>-->
 		<h:form>
-		<h:dataTable value="#{currentCat.books}" var="book">
-    		<h:column>
-				<f:facet name="header">Photo</f:facet>
-				<!-- <h:outputText value="#{book.date}"/> -->
-			</h:column>
-			
-			<h:column>
-				<f:facet name="header">Titre</f:facet>
-					<h:commandLink action="#{bookController.displayBook(book.id)}" value="#{book.title}"></h:commandLink>	
-				<!-- <h:link value="#{book.title}" outcome="book">
-	  				<f:param name="selectedBookId" value="#{book.id}"/>
-	  			</h:link> -->
-			</h:column>			
-		</h:dataTable>
-		</h:form>			
+			<ul class="cp_listing clearfix">
+				<ui:repeat var="book" value="#{currentCat.books}">
+					<li class="cp_item"><h:graphicImage height="276" width="184"
+							url="http://placehold.it/184x276/&amp;text=BOOK" />
+						<p>
+							<h:commandLink action="#{bookController.displayBook(book.id)}"
+								value="#{book.title}"></h:commandLink>
+						</p>
+						<p>
+							<h:outputText value="#{book.price} €" />
+						</p></li>
+				</ui:repeat>
+			</ul>
+		</h:form>
+		<!-- <p:dataList value="#{currentCat.books}" var="book"
+			styleClass="cp_listing clearfix li.cp_item"
+			style="min-height: 690px;">
+			<p:graphicImage height="276" width="184"
+				url="http://placehold.it/184x276/&amp;text=BOOK" />
+			<p>
+				<p:commandLink action="#{bookController.displayBook(book.id)}"
+					value="#{book.title}"></p:commandLink>
+			</p>
+			<p>
+				<h:outputText value="#{book.price} €" />
+			</p>
+		</p:dataList> -->
+	</ui:define>
+	<ui:define name="bottom">
+		<ui:include src="bottom.xhtml" />
 	</ui:define>
 </ui:composition>
-
- <!-- 
- title 
-   price = new BigDecimal(0);;
-   date = new Date();
- List<Author> authors;
- photo;
- <h:column>
-				<f:facet name="header">Date</f:facet>
-				<h:outputText value="#{book.date}"/>
-			</h:column>
-			
-			<h:column>
-				<f:facet name="header">Auteurs</f:facet>
-				<h:outputText value="#{book.authors}"/>
-			</h:column>
-			
-  -->
-
- 
