@@ -30,5 +30,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/primefaces-3.5/primefaces-3.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/primefaces-3.5/flick-1.0.10.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -35,3 +35,4 @@ sun-appserv-samples/**
 # Package Files #
 *.war
 *.ear
+/build
