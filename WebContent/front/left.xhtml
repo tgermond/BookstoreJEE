@@ -1,49 +1,12 @@
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui">
-
-	<!-- <h:form>
-		<h:dataTable value="#{categoryController.getList()}" var="category">
-			<h:column>
-				<h:commandLink
-					action="#{categoryController.displayCategory(category.id)}"
-					value="#{category.title}"></h:commandLink>
-			</h:column>
-		</h:dataTable>
-	</h:form> -->
-
-	<nav id="cp_menu">
-		<section>
-			<section>
-				<h:form>
-					<h:commandLink action="#{categoryController.getList()}"
-						value="TOUTES LES CATÉGORIES"></h:commandLink>
-					<ul id="cp_menu_categories">
-						<ui:repeat var="category" value="#{categoryController.getList()}">
-							<li class="cp_menu_cat_button"><h:commandLink
-									action="#{categoryController.displayCategory(category.id)}"
-									value="#{category.title.toUpperCase()}"></h:commandLink></li>
-						</ui:repeat>
-					</ul>
-				</h:form>
-			</section>
-		</section>
-
-		<!-- <section>
-			<section>
-				<ul class="cp_menu_designers_panels">
-					<li><a
-						href="./Designer Clothing for men   Designer Shoes and Accessories   SSENSE_files/Designer Clothing for men   Designer Shoes and Accessories   SSENSE.htm"
-						class="selected">All Designers</a></li>
-
-					<li><a
-						href="http://www.ssense.com/men/designers/31_phillip_lim"
-						class="noselected">3.1 PHILLIP LIM</a></li>
-				</ul>
-			</section>
-		</section> -->
-	</nav>
-
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+  
+<h:form>
+<h:dataTable value ="#{categoryController.getList()}" var="category">
+  	<h:column>
+  		<h:commandLink action="#{categoryController.displayCategory(category.id)}" value="#{category.title}"></h:commandLink>
+  	</h:column>
+  </h:dataTable>
+</h:form>  
+  	
 </ui:composition>

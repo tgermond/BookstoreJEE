@@ -1,40 +1,24 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui">
-
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
 <f:view contentType="text/html">
 	<h:head>
-		<f:facet name="first">
-			<meta http-equiv="X-UA-Compatible" content="EmulateIE8" />
-			<meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
-			<title>Bookstore</title>
-		</f:facet>
-
-		<link rel="icon" type=""></link>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title></title>
 		<h:outputStylesheet library="css" name="stylesheet.css" />
 	</h:head>
-
 	<h:body>
-		<div class="header">
+		<div id="top">
 			<ui:insert name="top" />
 		</div>
-		<div class="browsing-sale-header"></div>
-		<div class="page">
-			<div>
-				<div>
-					<div class="content">
-						<ui:insert name="left" />
-						<ui:insert name="content" />
-					</div>
-				</div>
-			</div>
-			<div class="footer_push" id="footer_push"></div>
+		<div id="left">
+			<ui:insert name="left" />
 		</div>
-		<div class="footer">
-			<ui:insert name="bottom" />
+		<div id="content">
+			<ui:insert name="content" />
 		</div>
 	</h:body>
 </f:view>

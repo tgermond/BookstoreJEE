@@ -1,36 +1,29 @@
-<ui:composition xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui" template="template.xhtml">
-
-	<ui:define name="top">
-		<ui:include src="top.xhtml" />
-	</ui:define>
-	<ui:define name="left">
-		<ui:include src="left.xhtml" />
-	</ui:define>	
-	<ui:define name="content">
-		<ui:debug />
-		<h:form id="contentForm"
-			rendered="#{clientController.loggedIn != true}">
-			<h:panelGrid columns="3">
-				<h:outputText value="#{strings['Client.login']}" />
-				<h:inputText id="login" value="#{loginForm.login}" required="true" />
-				<h:message for="login"></h:message>
-				<h:outputText value="#{strings['Client.password']}" />
-				<h:inputSecret id="password" value="#{loginForm.password}"
-					required="true" />
-				<h:message for="password"></h:message>
-			</h:panelGrid>
-
-			<h:commandButton action="#{clientController.doLogin}"
-				value="Connexion" ajax="false" />
-			<h:link value="Inscription" outcome="inscription" />
-			<h:messages globalOnly="true" />
-		</h:form>
-	</ui:define>	
-	<ui:define name="bottom">
-		<ui:include src="bottom.xhtml" />
-	</ui:define>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="template.xhtml">
+  
+  <ui:define name="top">
+    <ui:include src="top.xhtml" />
+  </ui:define>
+  <ui:define name="left">
+    <ui:include src="left.xhtml" />
+  </ui:define>
+  <ui:define name="content">
+   <ui:debug />
+    <h:form id="contentForm" rendered="#{clientController.loggedIn != true}">
+   
+      <h:panelGrid columns="3">
+     
+        <h:outputText value="#{strings['Client.login']}" />
+        <h:inputText id="login" value="#{loginForm.login}" required="true" />
+        <h:message for="login"></h:message>
+        <h:outputText value="#{strings['Client.password']}" />
+        <h:inputSecret id="password" value="#{loginForm.password}" required="true" />
+        <h:message for="password"></h:message>
+      </h:panelGrid>
+        
+      <h:commandButton action="#{clientController.doLogin}" value="Connexion" ajax="false"/>
+       <h:link value="Inscription" outcome="inscription" />
+       <h:messages globalOnly="true"/>
+    </h:form>
+  </ui:define>
 </ui:composition>

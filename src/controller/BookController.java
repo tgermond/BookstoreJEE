@@ -2,8 +2,10 @@ package controller;
 import java.io.Serializable;
 
 import javax.ejb.EJB;
+
 import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Produces;
+
 import javax.inject.Named;
 
 import org.slf4j.Logger;
@@ -25,13 +27,18 @@ public class BookController implements Serializable {
 	private BookService bookService;
 	
 	private Book currentBook;
-
-	public Book getBookById(int id) {
+	
+	@Produces @LoggedIn @Named  
+	public Book getCurrentBook() {
+		return currentBook;
+	}
+	
+	public Book getBookById(int id){
 		return bookService.getBookById(id);
 	}
-
-	public void getPhoto(int id) {
-		//return bookService.getPhoto(id);
+	
+	public void getPhoto(int id){
+	//	return bookService.getPhoto(id);
 	}
 
 	@Produces
