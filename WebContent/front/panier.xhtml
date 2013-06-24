@@ -1,0 +1,53 @@
+ <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"  xmlns:c="http://java.sun.com/jstl/core" template="template.xhtml">
+ 
+  	<ui:define name="top">
+    	<ui:include src="top.xhtml" />
+  	</ui:define>
+  	<ui:define name="left">
+    	<ui:include src="left.xhtml" />
+  	</ui:define>
+	<ui:define name="content">
+		<h:form id="contenuPanier">
+			
+			 <h:dataTable value="#{panierController.currentOrder.items}" var="item">          
+				<h:column>
+					<f:facet name="header">Titre</f:facet>
+					<h:outputText value="#{item.book.title}"/>		
+				</h:column>
+					
+				<h:column>
+					<f:facet name="header">Date</f:facet>
+					<h:outputText value="#{item.book.date}" >
+              			<f:convertDateTime pattern="dd.MM.yyyy" />
+ 					</h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Prix</f:facet>
+					<h:outputText value="#{item.book.price}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Quantite</f:facet>
+					<h:outputText value="#{item.quantity}"/>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Actions</f:facet>
+					<h:commandLink action="#{panierController.addOne(currentBook.id)}" value="Ajouter" />	
+					
+					<h:commandLink action="#{panierController.removeOne(currentBook.id)}" value="Supprimer" />	
+				</h:column>		  
+          </h:dataTable>
+   			<h:panelGrid columns="2">  
+			     	<h:outputLabel value="Total" />	   
+			     	<h:outputText value="#{panierController.getTotal()}"/>	
+			     	<h:commandLink action="#{panierController.deleteAll()}" value="Vider le panier">
+					</h:commandLink>
+					
+
+			     	<h:commandLink action="#{panierController.recap}" value="Valider le panier">
+					</h:commandLink>		     	
+			</h:panelGrid>
+		</h:form>
+
+	</ui:define>
+</ui:composition>	

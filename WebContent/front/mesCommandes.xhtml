@@ -1,0 +1,41 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui" xmlns:h="http://java.sun.com/jsf/html" template="template.xhtml">
+  
+  <ui:define name="top">
+    <ui:include src="top.xhtml" />
+  </ui:define>
+  <ui:define name="left">
+    <ui:include src="left.xhtml" />
+  </ui:define>
+  <ui:define name="content"> 
+  	<h:form rendered="#{clientController.loggedIn}"> 
+			 <p:dataTable id="listeCommandes" value="#{currentClient.commandes}" var="com" >          
+				<p:column>
+					<f:facet name="header">Numero</f:facet>
+					<h:outputText value="#{com.id}"/>		
+				</p:column>
+				<p:column>
+					<f:facet name="header">Date</f:facet>
+					<h:outputText value="#{com.date}" >
+              			<f:convertDateTime pattern="dd/MM/yyyy" />
+ 					</h:outputText>
+				</p:column>
+				<p:column>
+					<f:facet name="header">Montant</f:facet>
+					<h:outputText value="#{com.total}"/>
+				</p:column>
+          </p:dataTable>	
+          
+	          <h:panelGrid columns="2">  
+	    		<p:panel header="Exporter"> 			
+				        <h:commandLink>  
+				            <p:graphicImage value="../resources/images/logo-pdf.png" />  
+				            <p:dataExporter type="pdf" target="listeCommandes" fileName="facture_#{com.id}"/>  
+				        </h:commandLink>  		       
+		        </p:panel>  
+			</h:panelGrid>
+	 </h:form>  
+   </ui:define>
+</ui:composition>
+
+      

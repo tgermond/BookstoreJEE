@@ -14,9 +14,10 @@
 	<h:panelGroup columns="3" rendered="#{clientController.loggedIn}">
 		<h:form id="Menu">
 			<h:panelGrid columns="3">
-				<h:commandLink rendered="#{clientController.loggedIn}" action="#{clientController.goToMyProfile()}"
+				<h:commandLink action="#{clientController.goToMyProfile()}"
 					value="MON COMPTE" />
-				<h:commandLink rendered="#{clientController.loggedIn}" action="#{clientController.doLogout()}"
+				<h:commandLink action="#{clientController.seeMyOrders()}" value="MES COMMANDES" />
+				<h:commandLink action="#{clientController.doLogout()}"
 					value="SE DÉCONNECTER" />
 			</h:panelGrid>
 		</h:form>
