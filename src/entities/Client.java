@@ -9,6 +9,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -25,6 +26,7 @@ import javax.persistence.OneToMany;
 public class Client extends Persistent {
   private String login;
   private String password;
+  private byte[] avatar;
   private String civilite;
   private String nom;
   private String prenom;
@@ -58,6 +60,17 @@ public class Client extends Persistent {
   public void setPassword(String password) {
     this.password = password;
   }
+  
+  @Lob
+  @Column(length = 100000)
+  public byte[] getAvatar() {
+    return this.avatar;
+  }
+  
+  public void setAvatar(byte[] avatar) {
+    this.avatar = avatar;
+  }
+
 
   @OneToMany(mappedBy="client",cascade ={CascadeType.PERSIST, CascadeType.REMOVE})
   public List<Order> getCommandes() {

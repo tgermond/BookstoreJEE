@@ -29,7 +29,8 @@ public class PanierController implements Serializable {
 	@EJB
 	private BookService bookService;
 	
-
+	@Inject
+	private MessageBean messageBean;
 	
 	@EJB
 	private OrderService orderService;
@@ -91,12 +92,17 @@ public class PanierController implements Serializable {
 		if(client == null){
 			return "login";
 		}
-		else{
+		else if(client.getNom()== null && client.getAdresse()== null && client.getZipcode()== 0 && client.getVille()==null){
+			messageBean.addMessage("coordonneesManquantes");
+			return "showProfile";
+		}
+		
+		{
 			currentOrder.setClient(client);
 			currentOrder.setDate(new Date());
 			orderService.create(currentOrder);
 			currentOrder.removeAll();
-			return "welcome";
+			return "mesCommandes";
 		}
 	}
 }

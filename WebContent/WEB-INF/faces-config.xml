@@ -38,7 +38,40 @@
 	    <from-view-id>*</from-view-id>
 	    <navigation-case>
 	      <from-outcome>inscription</from-outcome>
-	      <to-view-id>/front/register.xhtml</to-view-id>
+	      <to-view-id>/front/inscription.xhtml</to-view-id>
 	    </navigation-case>
  	</navigation-rule>
+ 	
+ 	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>showProfile</from-outcome>
+			<to-view-id>/front/showProfile.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>panier</from-outcome>
+			<to-view-id>/front/panier.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+		<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>recap</from-outcome>
+			<to-view-id>/front/recapitulatif.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>mesCommandes</from-outcome>
+			<to-view-id>/front/mesCommandes.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+ 	
 </faces-config>

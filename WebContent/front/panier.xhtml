@@ -43,9 +43,9 @@
 			     	<h:commandLink action="#{panierController.deleteAll()}" value="Vider le panier">
 					</h:commandLink>
 					
-
-			     	<h:commandLink action="#{panierController.recap}" value="Valider le panier">
-					</h:commandLink>		     	
+					<h:link  value="Valider le panier" outcome="recap" />
+			     	<!-- <h:commandLink action="#{panierController.recap()}" value="Valider le panier">
+					</h:commandLink> -->		     	
 			</h:panelGrid>
 		</h:form>
 

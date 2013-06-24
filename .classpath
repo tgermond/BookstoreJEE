@@ -4,8 +4,22 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry exported="true" kind="con" path="DERBY_CONTAINER"/>
-	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/primefaces-3.5/primefaces-3.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/primefaces-3.5/flick-1.0.10.jar"/>
+	<classpathentry kind="lib" path="D:/Thomas/MIAGE/M2/Java JEE/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="D:/Thomas/MIAGE/M2/Java JEE/primefaces-3.5.jar"/>
+	<classpathentry kind="lib" path="D:/Thomas/MIAGE/M2/Java JEE/quartz-2.1.7.jar"/>
+	<classpathentry kind="lib" path="D:/Thomas/MIAGE/M2/Java JEE/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/Thomas/MIAGE/M2/Java JEE/slf4j-log4j12-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/Thomas/MIAGE/M2/Java JEE/flick-1.0.10.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.sun.enterprise.jst.server.runtimeTarget/GlassFish 3.1.2">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JSF 2.1 (Mojarra 2.1.6-FCS)">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
@@ -18,19 +32,5 @@
 			<attribute name="owner.project.facets" value="jpt.jpa"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="oracle.eclipse.tools.glassfish.lib.system">
-		<attributes>
-			<attribute name="owner.project.facets" value="jst.web"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7">
-		<attributes>
-			<attribute name="owner.project.facets" value="java"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/Bookstore Jee/TP_JEE/WebContent/WEB-INF/lib/log4j-1.2.16.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/Bookstore Jee/TP_JEE/WebContent/WEB-INF/lib/quartz-2.1.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/Bookstore Jee/TP_JEE/WebContent/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Yacin/Documents/Cours/Java/Bookstore Jee/TP_JEE/WebContent/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

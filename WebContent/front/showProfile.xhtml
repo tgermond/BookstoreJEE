@@ -11,48 +11,51 @@
   
   <ui:debug />
  		<h:form id="profilForm" rendered="#{clientController.loggedIn}">  
+ 		<h:link rendered="#{clientController.loggedIn}" value="Mes commandes" outcome="mesCommandes" />
  		<fieldset>
             <legend>Vos informations</legend>
  				<h:panelGrid columns="3">  
-			     	<h:outputLabel for="login" value="Identifiant" />	   
+			     	<h:outputLabel for="login" value="Identifiant*" />	   
 			     	<h:inputText id="login" value="#{currentClient.login}" required="true"/>
 			     	<h:message for="login"></h:message>
 		   		
 			   		<h:outputLabel for="password" value="Mot de passe" />
-			   		<h:inputSecret id="password" value="#{currentClient.password}" required="true"/>
+			   		<h:inputSecret id="password" value="#{currentClient.password}"/>
 			     	<h:message for="password"></h:message>  
 			     	
-			     	<h:outputLabel for="nom" value="Nom" />	   
+			     	<h:outputLabel for="nom" value="Nom*" />	   
 			     	<h:inputText id="nom" value="#{currentClient.nom}" required="true"/>
 			     	<h:message for="nom"></h:message>
 			     	
-			     	<h:outputLabel for="prenom" value="Prenom" />	   
+			     	<h:outputLabel for="prenom" value="Prenom*" />	   
 			     	<h:inputText id="prenom" value="#{currentClient.prenom}" required="true"/>
 			     	<h:message for="prenom"></h:message>
 			     	
-			     	<h:outputLabel for="email" value="Email" />	   
+			     	<h:outputLabel for="email" value="Email*" />	   
 			     	<h:inputText id="email" value="#{currentClient.email}" required="true"/>
 			     	<h:message for="email"></h:message>
 			     	
-			     	<h:outputLabel for="adresse" value="Adresse" />	   
+			     	<h:outputLabel for="adresse" value="Adresse*" />	   
 			     	<h:inputText id="adresse" value="#{currentClient.adresse}" required="true"/>
 			     	<h:message for="adresse"></h:message>
 			     	
-			     	<h:outputLabel for="ville" value="Ville" />	   
-			     	<h:inputText id="ville" value="#{currentClient.ville}" required="true"/>
-			     	<h:message for="ville"></h:message>
-			     	
-			     	<h:outputLabel for="zipcode" value="Code postal" />	   
+			     	<h:outputLabel for="zipcode" value="Code postal*" />				   
 			     	<h:inputText id="zipcode" value="#{currentClient.zipcode}" required="true"/>
-			     	<h:message for="zipcode"></h:message>
+			     	<h:message for="zipcode"></h:message>   
 			     	
-			     		
+			     	<h:outputLabel for="ville" value="Ville*" />	   
+			     	<h:inputText id="ville" value="#{currentClient.ville}" required="true"/>
+			     	<h:message for="ville"></h:message>		     	 	
 	   		</h:panelGrid>
 	   		<h:commandButton action="#{clientController.updateProfile}" value="Enregistrer les modifications"/>
+	   		
       	<h:messages globalOnly="true"/>	
 	   	</fieldset>
+	   	<p:graphicImage  height="80" width="90" value="#{clientController.photo}" />		
+	   	<p:fileUpload fileUploadListener="#{clientController.uploadPhoto}"
+				 allowTypes="/(\.|\/)(gif|jpe?g|png)$/" sizeLimit="100000" description="Select Images"/>
 		</h:form>		
    </ui:define>
 </ui:composition>
 
-      
+     
