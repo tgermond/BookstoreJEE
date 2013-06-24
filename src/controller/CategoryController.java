@@ -28,8 +28,7 @@ public class CategoryController implements Serializable {
 	
 	@EJB
 	private CategoryService categoryService;
-	
-	
+		
 	private Category currentCat;
 	
 	@Produces @LoggedIn @Named  
